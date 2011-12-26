@@ -1,0 +1,146 @@
+html, body {
+	background: url('wood.jpg');
+	font-family: "segoe print";
+}
+div#board {
+	overflow: auto;
+	padding: 20px 30px;
+	position: absolute;
+	top: 47px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+div.card {
+	font-family: "segoe print", Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 5px;
+	border-top: 1px solid #FFF6D1;
+	border-left: 1px solid #FFF6D1;
+	border-bottom: 1px solid #EDCD40;
+	border-right: 1px solid #EDCD40;
+	width: 120px;
+	height: 74px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px rgba(0,0,0,.4);
+	display: inline-block;
+	z-index: 1;
+	cursor: hand;
+	-webkit-transition: -webkit-transform 0.05s ease-out;
+	background: -moz-linear-gradient(top, rgba(255,237,158,1), rgba(255,224,87,1));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,237,158,1)), color-stop(1, rgba(255,224,87,1)));
+}
+div.card:hover {
+	cursor: move;
+	-webkit-transform: scale(1.05);
+	box-shadow: 5px 5px 5px rgba(0,0,0,.4);
+	background: -moz-linear-gradient(top, rgba(255,229,115,1), rgba(255,215,41,1));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,229,115,1)), color-stop(1, rgba(255,215,41,1)));
+}
+div.card.selected {
+	-webkit-transform: scale(1.3);
+	box-shadow: 20px 20px 10px rgba(0,0,0,.5);
+}
+.input {
+	text-align: center;
+	padding: 10px 0;
+}
+.card-content {
+	background: rgba(0,0,0,.3);
+	padding: 5px 10px;
+	border-radius: 20px;
+	border: 1px solid #421700;
+	width: 300px;
+	box-shadow: inset 0px 0 5px rgba(0,0,0,.7);
+	color: #fff;
+	font-family: "segoe print";
+}
+.card-content:focus {
+	background: rgba(0,0,0,.5);
+	outline: none;
+}
+.button {
+	background: -moz-linear-gradient(top, rgba(41,121,186,1),rgba(1,58,105,1));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(41,121,186,1)), color-stop(1, rgba(1,58,105,1)));
+	border: 1px solid #00223D;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0 -1px rgba(0,0,0,1);
+	padding: 5px 20px;
+	border-radius: 5px;
+	box-shadow: 0px 1px 4px rgba(0,0,0,.6);
+}
+.red {
+	background: -moz-linear-gradient(top,rgba(217,41,41,1),rgba(138,0,0,1));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(217,41,41,1)), color-stop(1, rgba(138,0,0,1)));
+	border-color: #8A0000;
+}
+#trash {
+	position: absolute;
+	width: 130px;
+	height: 130px;
+	bottom: 0;
+	right: 0;
+	background: red;
+	background: url('trash.png') center no-repeat;
+	opacity: .5;
+}
+#trash:hover {
+	bottom: 10px;
+	opacity: 1;
+	-moz-animation-duration: 0.3s;
+	-webkit-animation-duration: 0.3s;
+	-moz-animation-name: bounce;
+	-webkit-animation-name: bounce;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-direction: alternate;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+	-moz-animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes bounce {
+from {
+	bottom: 0px;
+}
+to {
+	bottom: 5px
+}
+}
+@-moz-keyframes
+bounce {from {
+	bottom: 0px;
+}
+to {
+	bottom: 5px
+}
+}
+
+div.card {
+	-moz-animation-duration: .5s;
+	-webkit-animation-duration: .5s;
+	-moz-animation-name: drop;
+	-webkit-animation-name: drop;
+	-moz-animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	-moz-animation-direction: normal;
+	-webkit-animation-direction: normal;
+	-webkit-animation-timing-function: ease-out;
+	-moz-animation-timing-function: ease-out;
+}
+/*@-webkit-keyframes drop{
+ from { top:-100px; -webkit-transform: rotate(20deg);}
+ to { top:320px; left:300px;}
+ }*/
+
+#trash.hover {
+	opacity: 1;
+}
+#trash.filled {
+	background: url('trash-full.png') center no-repeat;
+}
+div.stacker {
+	background: #333;
+	border-radius: 3px;
+	border: 1px solid #000; width: 150px; padding: 10px;
+}
