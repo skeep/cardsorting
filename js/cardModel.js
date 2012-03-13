@@ -19,7 +19,7 @@ var card = (function cardModel() {
 		cssAnimation.type = 'text/css';
 		var rules = document
 				.createTextNode('@-webkit-keyframes drop{from { top:-90px; left:'
-						+ (posX-(74+12))
+						+ (posX - (74 + 12))
 						+ 'px; -webkit-transform: rotate('
 						+ app.rand(-270, 270)
 						+ 'deg);}to { top:'
@@ -52,8 +52,8 @@ var card = (function cardModel() {
 				.getItem('highestZindex');
 		card.content = content;
 		card.zindex = highestZindex;
-		card.top = (posY - ((74+12)+app.rand(-50,50))) + "px";
-		card.left = (posX - ((120+12)+app.rand(-400,400))) + "px";
+		card.top = (posY - ((74 + 12) + app.rand(-50, 50))) + "px";
+		card.left = (posX - ((120 + 12) + app.rand(-400, 400))) + "px";
 		newCounter++;
 		highestZindex++;
 		cardKey = 'card' + newCounter;
